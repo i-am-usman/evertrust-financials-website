@@ -491,6 +491,7 @@ function MeetTheTeamPage() {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Team Member 1: Iqra */}
             <article className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.14)]">
               <div className="flex justify-center">
                 <div className="flex h-36 w-36 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-50 shadow-inner">
@@ -501,7 +502,6 @@ function MeetTheTeamPage() {
                   />
                 </div>
               </div>
-
               <div className="mt-5 text-center">
                 <h3 className="font-[Fraunces] text-2xl tracking-[-0.02em] text-slate-900">Iqra Mirani</h3>
                 <p className="mt-2 text-sm font-bold text-sky-700">Business Development Representative</p>
@@ -518,6 +518,7 @@ function MeetTheTeamPage() {
               </div>
             </article>
 
+            {/* Team Member 2: Usman */}
             <article className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.14)]">
               <div className="flex justify-center">
                 <div className="flex h-36 w-36 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-50 shadow-inner">
@@ -528,7 +529,6 @@ function MeetTheTeamPage() {
                   />
                 </div>
               </div>
-
               <div className="mt-5 text-center">
                 <h3 className="font-[Fraunces] text-2xl tracking-[-0.02em] text-slate-900">Muhammad Usman</h3>
                 <p className="mt-2 text-sm font-bold text-sky-700">Technical Lead & Automation Engineer</p>
@@ -543,6 +543,62 @@ function MeetTheTeamPage() {
                 >
                   <Linkedin size={16} />
                   View LinkedIn
+                </a>
+              </div>
+            </article>
+
+            {/* Team Member 3: Hina */}
+            <article className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.14)]">
+              <div className="flex justify-center">
+                <div className="flex h-36 w-36 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-50 shadow-inner">
+                  {/* Just update this image source when you drop her picture into the public folder */}
+                  <img
+                    src="/hina-batool.png" 
+                    alt="Hina Batool, Financial Analyst"
+                    className="h-32 w-32 rounded-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="mt-5 text-center">
+                <h3 className="font-[Fraunces] text-2xl tracking-[-0.02em] text-slate-900">Hina Batool</h3>
+                <p className="mt-2 text-sm font-bold text-sky-700">Financial Analyst</p>
+                <p className="mt-4 text-sm leading-7 text-slate-600">
+                  Bringing specialized expertise from one of the top global accounting firms to deliver deep financial insight, risk analysis, and strategic forecasting.
+                </p>
+                <a
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-sky-700 transition hover:text-sky-800"
+                  href="mailto:hina@evertrustfinancials.services"
+                >
+                  <Mail size={16} />
+                  Contact Hina
+                </a>
+              </div>
+            </article>
+
+            {/* Team Member 4: Syed */}
+            <article className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.14)]">
+              <div className="flex justify-center">
+                <div className="flex h-36 w-36 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-50 shadow-inner">
+                   {/* Just update this image source when you drop his picture into the public folder */}
+                  <img
+                    src="/syed-ghulam.png"
+                    alt="Syed Ghulam Hyder Shah, Fractional CFO"
+                    className="h-32 w-32 rounded-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="mt-5 text-center">
+                <h3 className="font-[Fraunces] text-2xl tracking-[-0.02em] text-slate-900">Syed Ghulam Hyder Shah</h3>
+                <p className="mt-2 text-sm font-bold text-sky-700">Fractional CFO</p>
+                <p className="mt-4 text-sm leading-7 text-slate-600">
+                  An experienced financial leader specializing in Audit and ERP implementation with a proven track record at PwC, one of the top accounting firms in the world.
+                </p>
+                <a
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-sky-700 transition hover:text-sky-800"
+                  href="mailto:syed@evertrustfinancials.services"
+                >
+                  <Mail size={16} />
+                  Contact Syed
                 </a>
               </div>
             </article>
