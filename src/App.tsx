@@ -553,7 +553,7 @@ function MeetTheTeamPage() {
                 <div className="flex h-36 w-36 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-50 shadow-inner">
                   {/* Just update this image source when you drop her picture into the public folder */}
                   <img
-                    src="/hina-batool.png" 
+                    src="/hina-batool.jpg" 
                     alt="Hina Batool, Financial Analyst"
                     className="h-32 w-32 rounded-full object-cover"
                   />
@@ -581,7 +581,7 @@ function MeetTheTeamPage() {
                 <div className="flex h-36 w-36 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-50 shadow-inner">
                    {/* Just update this image source when you drop his picture into the public folder */}
                   <img
-                    src="/syed-ghulam.png"
+                    src="/syed-ghulam.jpeg"
                     alt="Syed Ghulam Hyder Shah, Fractional CFO"
                     className="h-32 w-32 rounded-full object-cover"
                   />
