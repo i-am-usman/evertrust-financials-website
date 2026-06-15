@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your existing homepage CSS stays here... */
+
 :root {
   color-scheme: light;
   --bg: #f4f7fb;
