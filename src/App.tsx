@@ -123,7 +123,7 @@ function HomePage() {
 
         <nav className="nav">
           <a href="#services">Services</a>
-          <a href="/meet-the-team.html">Meet the Team</a>
+          <a href="/meet-the-team">Meet the Team</a>
           <a href="#roi">Value</a>
           <a href="#security">Security</a>
           <a href="#regions">Regions</a>
@@ -421,7 +421,7 @@ function MeetTheTeamPage() {
           <a href="/#services" className="hover:text-sky-600">
             Services
           </a>
-          <a href="/meet-the-team.html" className="text-sky-700">
+          <a href="/meet-the-team" className="text-sky-700">
             Meet the Team
           </a>
         </nav>
