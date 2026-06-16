@@ -109,33 +109,55 @@ function SectionTitle({ eyebrow, title, copy }: SectionTitleProps) {
   );
 }
 
+// ---------------------------------------------------------
+// REUSABLE COMPONENTS
+// ---------------------------------------------------------
+
+function Header() {
+  return (
+    <header className="topbar">
+      <a className="brand" href="/" aria-label="EverTrust Financials home">
+        <img src="/evertrust-logo.svg" alt="EverTrust Financials logo" className="brand-logo" />
+        <span>
+          <strong>EverTrust Financials</strong>
+          <small>Outsourced bookkeeping that scales with you</small>
+        </span>
+      </a>
+
+      <nav className="nav">
+        <a href="/services">Services</a>
+        <a href="/meet-the-team">Meet the Team</a>
+        <a href="/value">Value</a>
+        <a href="/security">Security</a>
+        <a href="/regions">Regions</a>
+        <a href="/contact">Contact</a>
+      </nav>
+
+      <a className="button button-primary" href="/contact">
+        Book a Consultation
+        <ArrowRight size={18} />
+      </a>
+    </header>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="footer">
+      <p>EverTrust Financials</p>
+      <p>Outsourced bookkeeping, payroll, and compliance support for UK, US, and Canadian clients.</p>
+    </footer>
+  );
+}
+
+// ---------------------------------------------------------
+// PAGE COMPONENTS
+// ---------------------------------------------------------
+
 function HomePage() {
   return (
     <div className="site">
-      <header className="topbar">
-        <a className="brand" href="#top" aria-label="EverTrust Financials home">
-          <img src="/evertrust-logo.svg" alt="EverTrust Financials logo" className="brand-logo" />
-          <span>
-            <strong>EverTrust Financials</strong>
-            <small>Outsourced bookkeeping that scales with you</small>
-          </span>
-        </a>
-
-        <nav className="nav">
-          <a href="#services">Services</a>
-          <a href="/meet-the-team">Meet the Team</a>
-          <a href="#roi">Value</a>
-          <a href="#security">Security</a>
-          <a href="#regions">Regions</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <a className="button button-primary" href="#contact">
-          Book a Consultation
-          <ArrowRight size={18} />
-        </a>
-      </header>
-
+      <Header />
       <main id="top">
         <section className="hero">
           <div className="hero-copy reveal">
@@ -147,11 +169,11 @@ function HomePage() {
             </p>
 
             <div className="hero-actions">
-              <a className="button button-primary" href="#contact">
+              <a className="button button-primary" href="/contact">
                 Book a Consultation
                 <ArrowRight size={18} />
               </a>
-              <a className="button button-secondary" href="#roi">
+              <a className="button button-secondary" href="/value">
                 See the ROI
               </a>
             </div>
@@ -210,13 +232,54 @@ function HomePage() {
           })}
         </section>
 
-        <section className="content-section reveal" id="services">
+        <section className="content-section reveal">
+          <SectionTitle eyebrow="How we work" title="A simple process that keeps the lead journey calm and fast." />
+          <div className="steps-grid">
+            {steps.map((step) => (
+              <article key={step.step} className="card step-card">
+                <span>{step.step}</span>
+                <h3>{step.title}</h3>
+                <p>{step.copy}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="content-section reveal">
+          <SectionTitle eyebrow="Proof" title="Trust signals that help visitors feel comfortable reaching out." />
+          <div className="testimonial-grid">
+            {testimonials.map((testimonial) => (
+              <blockquote key={testimonial.author} className="card quote-card">
+                <div className="stars">
+                  <Sparkles size={16} />
+                  <Sparkles size={16} />
+                  <Sparkles size={16} />
+                  <Sparkles size={16} />
+                  <Sparkles size={16} />
+                </div>
+                <p>“{testimonial.quote}”</p>
+                <footer>{testimonial.author}</footer>
+              </blockquote>
+            ))}
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+function ServicesPage() {
+  return (
+    <div className="site">
+      <Header />
+      <main id="top">
+        <section className="content-section reveal">
           <SectionTitle
             eyebrow="Services"
             title="Everything organized into clear, scannable finance support blocks."
-            copy="The homepage uses simple service cards so prospects can understand what is handled at a glance."
+            copy="Simple service cards so you understand what is handled at a glance."
           />
-
           <div className="service-grid">
             {services.map((service) => {
               const Icon = service.icon;
@@ -232,13 +295,23 @@ function HomePage() {
             })}
           </div>
         </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
 
-        <section className="content-section split-layout reveal" id="roi">
+function ValuePage() {
+  return (
+    <div className="site">
+      <Header />
+      <main id="top">
+        <section className="content-section split-layout reveal">
           <div>
             <SectionTitle
               eyebrow="Value & ROI"
               title="Outsourcing is the cleaner financial choice for many growing businesses."
-              copy="Use this section to show why a flexible service model is often more efficient than a single in-house hire."
+              copy="A flexible service model is often more efficient than a single in-house hire."
             />
             <div className="comparison-card">
               <div>
@@ -277,8 +350,18 @@ function HomePage() {
             </div>
           </aside>
         </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
 
-        <section id="security" className="content-section security-layout reveal">
+function SecurityPage() {
+  return (
+    <div className="site">
+      <Header />
+      <main id="top">
+        <section className="content-section security-layout reveal">
           <div>
             <SectionTitle
               eyebrow="Data Security & Compliance"
@@ -313,14 +396,23 @@ function HomePage() {
             </div>
           </div>
         </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
 
-        <section id="regions" className="content-section reveal">
+function RegionsPage() {
+  return (
+    <div className="site">
+      <Header />
+      <main id="top">
+        <section className="content-section reveal">
           <SectionTitle
             eyebrow="Regional pages"
-            title="Dedicated landing pages can speak directly to each market."
-            copy="Keep the homepage global, then use regional landing pages for country-specific trust and terminology."
+            title="Dedicated support tailored to your market."
+            copy="Country-specific trust and terminology built into our standard workflows."
           />
-
           <div className="region-grid">
             {regions.map((region) => (
               <article key={region.name} className="card region-card">
@@ -338,45 +430,23 @@ function HomePage() {
             ))}
           </div>
         </section>
+      </main>
+      <Footer />
+    </div>
+  );
+}
 
-        <section className="content-section reveal">
-          <SectionTitle eyebrow="How we work" title="A simple process that keeps the lead journey calm and fast." />
-          <div className="steps-grid">
-            {steps.map((step) => (
-              <article key={step.step} className="card step-card">
-                <span>{step.step}</span>
-                <h3>{step.title}</h3>
-                <p>{step.copy}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="content-section reveal">
-          <SectionTitle eyebrow="Proof" title="Trust signals that help visitors feel comfortable reaching out." />
-          <div className="testimonial-grid">
-            {testimonials.map((testimonial) => (
-              <blockquote key={testimonial.author} className="card quote-card">
-                <div className="stars">
-                  <Sparkles size={16} />
-                  <Sparkles size={16} />
-                  <Sparkles size={16} />
-                  <Sparkles size={16} />
-                  <Sparkles size={16} />
-                </div>
-                <p>“{testimonial.quote}”</p>
-                <footer>{testimonial.author}</footer>
-              </blockquote>
-            ))}
-          </div>
-        </section>
-
-        <section id="contact" className="content-section contact-section reveal">
+function ContactPage() {
+  return (
+    <div className="site">
+      <Header />
+      <main id="top">
+        <section className="content-section contact-section reveal">
           <div>
             <p className="eyebrow">Contact</p>
             <h2>Book a consultation and get a response that matches your region.</h2>
             <p>
-              The live version can connect to a calendar flow and a region-aware intake form for faster scheduling.
+              Connect with our team today to establish a secure, scalable accounting infrastructure.
             </p>
           </div>
 
@@ -392,12 +462,8 @@ function HomePage() {
             </a>
           </div>
         </section>
-
-        <footer className="footer">
-          <p>EverTrust Financials</p>
-          <p>Outsourced bookkeeping, payroll, and compliance support for UK, US, and Canadian clients.</p>
-        </footer>
       </main>
+      <Footer />
     </div>
   );
 }
@@ -415,18 +481,13 @@ function MeetTheTeamPage() {
         </a>
 
         <nav className="flex flex-wrap items-center gap-4 text-sm font-semibold text-slate-600">
-          <a href="/" className="hover:text-sky-600">
-            Home
-          </a>
-          <a href="/#services" className="hover:text-sky-600">
-            Services
-          </a>
-          <a href="/meet-the-team" className="text-sky-700">
-            Meet the Team
-          </a>
+          <a href="/" className="hover:text-sky-600">Home</a>
+          <a href="/services" className="hover:text-sky-600">Services</a>
+          <a href="/meet-the-team" className="text-sky-700">Meet the Team</a>
+          <a href="/contact" className="hover:text-sky-600">Contact</a>
         </nav>
 
-        <a className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-sky-600/20 transition hover:-translate-y-0.5 hover:bg-sky-700" href="mailto:contact@evertrustfinancials.services">
+        <a className="inline-flex items-center gap-2 rounded-full bg-sky-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-sky-600/20 transition hover:-translate-y-0.5 hover:bg-sky-700" href="/contact">
           Book a Consultation
           <ArrowRight size={18} />
         </a>
@@ -491,7 +552,6 @@ function MeetTheTeamPage() {
           </div>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {/* Team Member 1: Iqra */}
             <article className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.14)]">
               <div className="flex justify-center">
                 <div className="flex h-36 w-36 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-50 shadow-inner">
@@ -518,7 +578,6 @@ function MeetTheTeamPage() {
               </div>
             </article>
 
-            {/* Team Member 2: Usman */}
             <article className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.14)]">
               <div className="flex justify-center">
                 <div className="flex h-36 w-36 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-50 shadow-inner">
@@ -547,13 +606,11 @@ function MeetTheTeamPage() {
               </div>
             </article>
 
-            {/* Team Member 3: Hina */}
             <article className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.14)]">
               <div className="flex justify-center">
                 <div className="flex h-36 w-36 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-50 shadow-inner">
-                  {/* Just update this image source when you drop her picture into the public folder */}
                   <img
-                    src="/hina-batool.jpg" 
+                    src="/hina-batool.png" 
                     alt="Hina Batool, Financial Analyst"
                     className="h-32 w-32 rounded-full object-cover"
                   />
@@ -575,13 +632,11 @@ function MeetTheTeamPage() {
               </div>
             </article>
 
-            {/* Team Member 4: Syed */}
             <article className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white p-6 shadow-[0_18px_50px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(15,23,42,0.14)]">
               <div className="flex justify-center">
                 <div className="flex h-36 w-36 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-50 shadow-inner">
-                   {/* Just update this image source when you drop his picture into the public folder */}
                   <img
-                    src="/syed-ghulam.jpeg"
+                    src="/syed-ghulam.png"
                     alt="Syed Ghulam Hyder Shah, Fractional CFO"
                     className="h-32 w-32 rounded-full object-cover"
                   />
@@ -609,10 +664,26 @@ function MeetTheTeamPage() {
   );
 }
 
-export default function App() {
-  if (currentPath === '/meet-the-team' || currentPath === '/meet-the-team.html') {
-    return <MeetTheTeamPage />;
-  }
+// ---------------------------------------------------------
+// ROUTER
+// ---------------------------------------------------------
 
-  return <HomePage />;
+export default function App() {
+  switch (currentPath) {
+    case '/services':
+      return <ServicesPage />;
+    case '/value':
+      return <ValuePage />;
+    case '/security':
+      return <SecurityPage />;
+    case '/regions':
+      return <RegionsPage />;
+    case '/contact':
+      return <ContactPage />;
+    case '/meet-the-team':
+    case '/meet-the-team.html':
+      return <MeetTheTeamPage />;
+    default:
+      return <HomePage />;
+  }
 }
