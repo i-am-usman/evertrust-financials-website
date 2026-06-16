@@ -25,8 +25,12 @@ export default function MeetTheTeamPage() {
             <div className="relative min-h-[280px] bg-gradient-to-br from-sky-50 via-white to-teal-50 p-6 md:p-8">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.14),transparent_28%),radial-gradient(circle_at_75%_35%,rgba(20,184,166,0.16),transparent_24%)]" />
               <div className="relative flex h-full items-center justify-center">
-                <img src="/logo.png" alt="EverTrust Financials logo" className="w-full max-w-[290px] drop-shadow-[0_18px_40px_rgba(15,23,42,0.14)]" />
-              </div>
+                <img 
+                    src="/logo.png" 
+                    alt="EverTrust Financials logo" 
+                    className="w-full h-auto max-w-[290px] object-contain drop-shadow-[0_18px_40px_rgba(15,23,42,0.14)]" 
+                />
+                </div>
             </div>
           </div>
         </section>
