@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://evertrustfinancials.services/sitemap.xml
