@@ -14,7 +14,7 @@ export default function MeetTheTeamPage() {
           <div className="grid gap-0 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
               <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.25em] text-sky-600">Meet the EverTrust Team</p>
-              <h1 className="font-[Fraunces] text-4xl md:text-6xl leading-[0.95] tracking-[-0.02em] text-slate-900">
+              <h1 className="font-[Fraunces] text-3xl md:text-4xl leading-[0.95] tracking-[-0.02em] text-slate-900">
                 Dedicated to keeping your business compliant, profitable, and stress-free.
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
