@@ -498,9 +498,9 @@ function MeetTheTeamPage() {
           <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="p-7 md:p-10 lg:p-12">
               <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.18em] text-sky-600">Meet the EverTrust Team</p>
-              <h1 className="font-[Fraunces] text-4xl leading-[0.95] tracking-[-0.02em] text-slate-900 md:text-6xl">
+              <h2 className="font-[Fraunces] text-4xl leading-[0.95] tracking-[-0.02em] text-slate-900 md:text-6xl">
                 Dedicated to keeping your business compliant, profitable, and stress-free across borders.
-              </h1>
+              </h2>
               <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
                 EverTrust Financials brings modern systems, automation, and responsive support to outsourced bookkeeping, payroll, and cross-border finance operations.
               </p>
