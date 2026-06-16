@@ -515,7 +515,7 @@ function MeetTheTeamPage() {
           </div>
         </section>
 
-        <section className="mt-8 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
+        {/* <section className="mt-8 overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
           <div className="grid gap-0 lg:grid-cols-[0.9fr_1.1fr]">
             <div className="bg-slate-50 p-7 md:p-10 lg:p-12">
               <div className="mx-auto flex h-56 w-56 items-center justify-center rounded-full border border-slate-200 bg-white shadow-[0_16px_40px_rgba(15,23,42,0.08)]">
@@ -543,7 +543,7 @@ function MeetTheTeamPage() {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="mt-8">
           <div className="mb-6">
@@ -610,7 +610,7 @@ function MeetTheTeamPage() {
               <div className="flex justify-center">
                 <div className="flex h-36 w-36 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-50 shadow-inner">
                   <img
-                    src="/hina-batool.png" 
+                    src="/hina-batool.jpg" 
                     alt="Hina Batool, Financial Analyst"
                     className="h-32 w-32 rounded-full object-cover"
                   />
@@ -636,7 +636,7 @@ function MeetTheTeamPage() {
               <div className="flex justify-center">
                 <div className="flex h-36 w-36 items-center justify-center rounded-full border-4 border-slate-100 bg-slate-50 shadow-inner">
                   <img
-                    src="/syed-ghulam.png"
+                    src="/syed-ghulam.jpeg"
                     alt="Syed Ghulam Hyder Shah, Fractional CFO"
                     className="h-32 w-32 rounded-full object-cover"
                   />
