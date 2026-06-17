@@ -12,7 +12,7 @@ export default function Header() {
     <header className="mx-auto mt-4 flex w-[min(1180px,calc(100%-1.5rem))] flex-col items-center justify-between gap-4 rounded-3xl border border-slate-200/80 bg-white/95 px-5 py-4 shadow-[0_24px_70px_rgba(15,23,42,0.12)] backdrop-blur-xl sticky top-4 z-[999] xl:flex-row">
       
       <a className="flex items-center gap-3" href="/">
-        <img src="/logo.png" alt="EverTrust Financials logo" className="h-13 w-13 rounded-2xl bg-white object-contain shadow-sm" />
+        <img src="/logo.webp" alt="EverTrust Financials logo" className="h-13 w-13 rounded-2xl bg-white object-contain shadow-sm" />
         <span className="grid leading-tight text-center xl:text-left">
           <strong className="font-[Fraunces] text-[1.05rem] tracking-[-0.02em] text-slate-900">
             EverTrust Financials
@@ -42,7 +42,7 @@ export default function Header() {
         </a>
       </nav>
 
-      <a className="inline-flex w-full justify-center items-center gap-2 rounded-full bg-sky-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-sky-600/20 transition hover:-translate-y-0.5 hover:bg-sky-700 md:w-auto" href="/contact">
+      <a className="inline-flex w-full justify-center items-center gap-2 rounded-full bg-sky-700 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-sky-600/20 transition hover:-translate-y-0.5 hover:bg-sky-700 md:w-auto" href="/contact">
         Book a Consultation
         <ArrowRight size={18} />
       </a>

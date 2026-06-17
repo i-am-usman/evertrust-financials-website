@@ -44,10 +44,31 @@ export default function HomePage() {
 
           <div className="hero-visual reveal">
             <div className="visual-stack">
-              {/* HOME PAGE IMAGES - Set A */}
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" alt="Business meeting in a bright office" className="hero-image hero-image-small hero-image-a" />
-              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1200&q=80" alt="Finance team reviewing reports" className="hero-image hero-image-main" />
-              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80" alt="Person working on a laptop with charts" className="hero-image hero-image-small hero-image-b" />
+              {/* Local WebP images with explicit dimensions to prevent layout shift */}
+              <img 
+                src="/images/EverTrust-5.webp" 
+                alt="Business meeting in a bright office" 
+                className="hero-image hero-image-small hero-image-a" 
+                width="500" 
+                height="333" 
+                loading="eager"
+              />
+              <img 
+                src="/images/EverTrust-1.webp" 
+                alt="Finance team reviewing reports" 
+                className="hero-image hero-image-main" 
+                width="800" 
+                height="533" 
+                loading="eager"
+              />
+              <img 
+                src="/images/EverTrust-3.webp" 
+                alt="Person working on a laptop with charts" 
+                className="hero-image hero-image-small hero-image-b" 
+                width="500" 
+                height="333" 
+                loading="eager"
+              />
             </div>
             <div className="hero-metric-card">
               {/* Added bg-amber-50 and text-amber-500 for a warm, premium feel */}

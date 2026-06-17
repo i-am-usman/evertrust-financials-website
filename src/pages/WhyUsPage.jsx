@@ -23,25 +23,39 @@ export default function WhyUsPage() {
         </div>
 
         {/* WHY US IMAGES - Set B (Completely different from Home Page) */}
+        
         <div className="mb-16 flex flex-col md:flex-row gap-6 items-stretch justify-center">
+          {/* Large Main Image */}
           <img 
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80" 
+            src="/images/EverTrust-6.webp" 
             alt="Global finance team collaborating" 
             className="w-full md:w-7/12 min-h-[300px] object-cover rounded-[2rem] shadow-[0_18px_50px_rgba(15,23,42,0.06)] border border-slate-200"
+            width="1200"
+            height="600"
+            loading="lazy"
           />
+          
+          {/* Side Stack of Images */}
           <div className="flex flex-col gap-6 w-full md:w-5/12">
             <img 
-                src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1000&auto=format&fit=crop" 
-                alt="Businessman working at office desk" 
-                className="w-full h-[220px] object-cover rounded-[2rem] shadow-[0_18px_50px_rgba(15,23,42,0.06)] border border-slate-200"
-                />
+              src="/images/EverTrust-2.webp" 
+              alt="Businessman working at office desk" 
+              className="w-full h-[220px] object-cover rounded-[2rem] shadow-[0_18px_50px_rgba(15,23,42,0.06)] border border-slate-200"
+              width="1000"
+              height="220"
+              loading="lazy"
+            />
             <img 
-                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1000&q=80" 
-                alt="Modern team discussing business in office" 
-                className="w-full h-[220px] object-cover rounded-[2rem] shadow-[0_18px_50px_rgba(15,23,42,0.06)] border border-slate-200 object-center"
+              src="/images/EverTrust-4.webp" 
+              alt="Modern team discussing business in office" 
+              className="w-full h-[220px] object-cover rounded-[2rem] shadow-[0_18px_50px_rgba(15,23,42,0.06)] border border-slate-200 object-center"
+              width="1000"
+              height="220"
+              loading="lazy"
             />
           </div>
         </div>
+        
 
         <div className="grid gap-8 lg:grid-cols-3">
           
