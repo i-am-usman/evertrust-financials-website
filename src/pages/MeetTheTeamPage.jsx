@@ -16,7 +16,7 @@ export default function MeetTheTeamPage() {
       <Header />
 
       <main className="mx-auto w-[min(1180px,calc(100%-1.5rem))] mt-8 md:mt-12">
-        Hero Section
+        {/* Hero Section */}
         <section className="overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
           <div className="grid gap-0 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
