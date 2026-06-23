@@ -60,7 +60,7 @@ export default function MeetTheTeamPage() {
               </div>
               <h3 className="font-[Fraunces] text-2xl text-slate-900">Zafar Ullah</h3>
               <p className="text-xs font-bold uppercase tracking-wider text-sky-600 mt-1 mb-4">Founding Partner</p>
-              <p className="text-sm leading-7 text-slate-600 mb-6">Currently working in UAE and also our Founding Partner.With a proven track record of serving clients across the UAE, US, UK, and Canada, Zafarullah brings global financial expertise and strategic leadership to our firm.</p>
+              <p className="text-sm leading-7 text-slate-600 mb-6"> Our UAE-based Founding Partner, Zafarullah, bridges local presence with global capability. Backed by a strong track record of supporting businesses across the UAE, US, UK, and Canada, he brings premier financial insights and strategic leadership to our firm.</p>
               <a href="mailto:founder@evertrustfinancials.services" className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-sky-600 transition">
                 <Mail size={16} /> Contact
               </a>
