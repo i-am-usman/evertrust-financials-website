@@ -4,12 +4,19 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export default function MeetTheTeamPage() {
+  const team = [
+    { name: "Syed Ghulam Hyder", role: "Fractional CFO", bio: "Financial leader specializing in Audit and ERP implementation with PwC experience.", link: "mailto:syed@evertrustfinancials.services", img: "/syed-ghulam.webp", icon: Mail },
+    { name: "Hina Batool", role: "Financial Analyst", bio: "Delivering deep financial insight, risk analysis, and strategic forecasting.", link: "mailto:hina@evertrustfinancials.services", img: "/hina-batool.webp", icon: Mail },
+    { name: "Muhammad Usman", role: "Technical Lead", bio: "Architecting secure infrastructure and custom automation solutions for reliability.", link: "https://www.linkedin.com/in/muhammad-usman-ai-ml/", img: "/muhammad-usman.webp", icon: Linkedin },
+    { name: "Iqra Mirani", role: "Business Dev Rep ( BDO )", bio: "Dedicated to understanding client needs and crafting tailored solutions.", link: "mailto:sales@evertrustfinancials.services", img: "/iqra-mirani.webp", icon: Mail }
+  ];
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 pb-20">
       <Header />
 
       <main className="mx-auto w-[min(1180px,calc(100%-1.5rem))] mt-8 md:mt-12">
-        {/* Hero Section */}
+        Hero Section
         <section className="overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
           <div className="grid gap-0 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
@@ -39,17 +46,26 @@ export default function MeetTheTeamPage() {
         <section className="mt-16 md:mt-24">
           <div className="mb-12 text-center">
             <h2 className="font-[Fraunces] text-3xl md:text-5xl tracking-[-0.02em] text-slate-900">The people behind the service.</h2>
-            <p className="mt-4 text-slate-600">Our experts are here to turn financial complexity into your competitive advantage.</p>
           </div>
 
+          {/* Founding Partner Section */}
+          <div className="mb-16 flex justify-center">
+            <article className="group bg-white p-10 rounded-[2rem] border-2 border-sky-100 shadow-xl max-w-lg w-full flex flex-col items-center text-center transition-all duration-300 hover:shadow-2xl">
+              <div className="mb-6 h-40 w-40 rounded-full border-4 border-slate-50 bg-slate-100 overflow-hidden shadow-inner">
+                <img src="/zafarullah.webp" alt="Zafar Ullah" className="h-full w-full object-cover" />
+              </div>
+              <h3 className="font-[Fraunces] text-2xl text-slate-900">Zafar Ullah</h3>
+              <p className="text-xs font-bold uppercase tracking-wider text-sky-600 mt-1 mb-4">Founding Partner</p>
+              <p className="text-sm leading-7 text-slate-600 mb-6">With a proven track record of serving clients across the US, UK, and Canada, Zafarullah brings global financial expertise and strategic leadership to our firm.</p>
+              <a href="mailto:founder@evertrustfinancials.services" className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-sky-600 transition">
+                <Mail size={16} /> Contact
+              </a>
+            </article>
+          </div>
+
+          {/* Other Team Members Grid */}
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {/* Team Member Component Pattern */}
-            {[
-              { name: "Syed Ghulam Hyder", role: "Fractional CFO", bio: "Financial leader specializing in Audit and ERP implementation with PwC experience.", link: "mailto:syed@evertrustfinancials.services", img: "/syed-ghulam.webp", icon: Mail },
-              { name: "Hina Batool", role: "Financial Analyst", bio: "Delivering deep financial insight, risk analysis, and strategic forecasting.", link: "mailto:hina@evertrustfinancials.services", img: "/hina-batool.webp", icon: Mail },
-              { name: "Muhammad Usman", role: "Technical Lead", bio: "Architecting secure infrastructure and custom automation solutions for reliability.", link: "https://www.linkedin.com/in/muhammad-usman-ai-ml/", img: "/muhammad-usman.webp", icon: Linkedin },
-              { name: "Iqra Mirani", role: "Business Dev Rep ( BDO )", bio: "Dedicated to understanding client needs and crafting tailored solutions.", link: "mailto:sales@evertrustfinancials.services", img: "/iqra-mirani.webp", icon: Mail }
-            ].map((member, i) => (
+            {team.map((member, i) => (
               <article key={i} className="group bg-white p-8 rounded-[2rem] border border-slate-200 shadow-[0_18px_50px_rgba(15,23,42,0.06)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(15,23,42,0.15)] flex flex-col items-center text-center">
                 <div className="mb-6 h-32 w-32 rounded-full border-4 border-slate-50 bg-slate-100 overflow-hidden shadow-inner">
                   <img src={member.img} alt={member.name} className="h-full w-full object-cover" />
