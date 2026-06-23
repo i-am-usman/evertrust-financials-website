@@ -21,23 +21,27 @@ export default function MeetTheTeamPage() {
           <div className="grid gap-0 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
               <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.25em] text-sky-600">Meet the EverTrust Team</p>
-              <h2 className="font-[Fraunces] text-3xl md:text-4xl leading-[0.95] tracking-[-0.02em] text-slate-900">
+              <h1 className="font-[Fraunces] text-3xl md:text-4xl leading-[0.95] tracking-[-0.02em] text-slate-900">
                 Dedicated to keeping your business compliant, profitable, and stress-free.
-              </h2>
+              </h1>
               <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
                 EverTrust Financials brings modern systems, automation, and responsive support to outsourced bookkeeping, payroll, and cross-border finance operations.
               </p>
             </div>
 
-            <div className="relative bg-gradient-to-br from-sky-50 via-white to-teal-50 flex items-center justify-center p-12">
+            {/* Right Column Container */}
+            <div className="relative bg-gradient-to-br from-sky-50 via-white to-teal-50 flex items-center justify-center p-12 min-h-[300px] md:min-h-full">
+              {/* Decorative Background Gradients */}
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.14),transparent_28%),radial-gradient(circle_at_75%_35%,rgba(20,184,166,0.16),transparent_24%)]" />
-              <img 
-                src="/logo.webp"
-                alt="EverTrust Financials Logo"
-                width="200" 
-                height="80" 
-                className="relative w-full max-w-[200px] h-auto object-contain drop-shadow-[0_20px_40px_rgba(15,23,42,0.15)]" 
-              />
+              
+              {/* Fixed Asset Container to stop production scaling issues */}
+              <div className="relative w-48 h-48 md:w-56 md:h-56 flex items-center justify-center">
+                <img 
+                  src="/logo.webp"
+                  alt="EverTrust Financials Logo"
+                  className="max-w-full max-h-full object-contain drop-shadow-[0_20px_40px_rgba(15,23,42,0.15)]" 
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -56,7 +60,7 @@ export default function MeetTheTeamPage() {
               </div>
               <h3 className="font-[Fraunces] text-2xl text-slate-900">Zafar Ullah</h3>
               <p className="text-xs font-bold uppercase tracking-wider text-sky-600 mt-1 mb-4">Founding Partner</p>
-              <p className="text-sm leading-7 text-slate-600 mb-6">With a proven track record of serving clients across the US, UK, and Canada, Zafarullah brings global financial expertise and strategic leadership to our firm.</p>
+              <p className="text-sm leading-7 text-slate-600 mb-6">With a proven track record of serving clients across the UAE, US, UK, and Canada, Zafarullah brings global financial expertise and strategic leadership to our firm.</p>
               <a href="mailto:founder@evertrustfinancials.services" className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-sky-600 transition">
                 <Mail size={16} /> Contact
               </a>
