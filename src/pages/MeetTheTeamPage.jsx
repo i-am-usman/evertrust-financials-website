@@ -18,24 +18,24 @@ export default function MeetTheTeamPage() {
       <main className="mx-auto w-[min(1180px,calc(100%-1.5rem))] mt-8 md:mt-12">
         {/* Hero Section */}
         <section className="overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white shadow-[0_24px_70px_rgba(15,23,42,0.08)]">
-          <div className="grid gap-0 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+          <div className="grid gap-0 lg:grid-cols-[1.1fr_0.9fr] items-center">
+            {/* Left Column (Text) - Clamped max-width to fix scaling */}
+            <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center max-w-2xl mx-auto lg:mx-0">
               <p className="mb-4 text-xs font-extrabold uppercase tracking-[0.25em] text-sky-600">Meet the EverTrust Team</p>
-              <h1 className="font-[Fraunces] text-3xl md:text-4xl leading-[0.95] tracking-[-0.02em] text-slate-900">
+              <h1 className="font-[Fraunces] text-3xl md:text-4xl lg:text-4xl xl:text-5xl leading-[1.1] tracking-[-0.02em] text-slate-900">
                 Dedicated to keeping your business compliant, profitable, and stress-free.
               </h1>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+              <p className="mt-6 max-w-xl text-base md:text-lg leading-8 text-slate-600">
                 EverTrust Financials brings modern systems, automation, and responsive support to outsourced bookkeeping, payroll, and cross-border finance operations.
               </p>
             </div>
 
-            {/* Right Column Container */}
-            <div className="relative bg-gradient-to-br from-sky-50 via-white to-teal-50 flex items-center justify-center p-12 min-h-[300px] md:min-h-full">
-              {/* Decorative Background Gradients */}
+            {/* Right Column (Logo) - Fixed layout bounds */}
+            <div className="relative bg-gradient-to-br from-sky-50 via-white to-teal-50 flex items-center justify-center p-12 min-h-[300px] lg:min-h-full self-stretch">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(14,165,233,0.14),transparent_28%),radial-gradient(circle_at_75%_35%,rgba(20,184,166,0.16),transparent_24%)]" />
               
-              {/* Fixed Asset Container to stop production scaling issues */}
-              <div className="relative w-48 h-48 md:w-56 md:h-56 flex items-center justify-center">
+              {/* Visual Asset Container */}
+              <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 flex items-center justify-center">
                 <img 
                   src="/logo.webp"
                   alt="EverTrust Financials Logo"
@@ -60,7 +60,7 @@ export default function MeetTheTeamPage() {
               </div>
               <h3 className="font-[Fraunces] text-2xl text-slate-900">Zafar Ullah</h3>
               <p className="text-xs font-bold uppercase tracking-wider text-sky-600 mt-1 mb-4">Founding Partner</p>
-              <p className="text-sm leading-7 text-slate-600 mb-6">With a proven track record of serving clients across the UAE, US, UK, and Canada, Zafarullah brings global financial expertise and strategic leadership to our firm.</p>
+              <p className="text-sm leading-7 text-slate-600 mb-6">Currently working in UAE and also our Founding Partner.With a proven track record of serving clients across the UAE, US, UK, and Canada, Zafarullah brings global financial expertise and strategic leadership to our firm.</p>
               <a href="mailto:founder@evertrustfinancials.services" className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-sky-600 transition">
                 <Mail size={16} /> Contact
               </a>
